@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Pages Site</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="DISCO: Language-Guided Manipulation with Diffusion Policies and Constrained Inpainting">
+  <meta name="keywords" content="Robotic Manipulation, Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISCO</title>
+
+  <!-- Google Analytics Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
+
+  <!-- External Styles and Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="path/to/your/custom.css">
+
+  <!-- External JS Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="path/to/your/custom.js"></script>
+
+  <!-- Interactive Task Update Script -->
+  <script>
+    function updateInteractive() {
+      var task = document.getElementById("interative-menu").value;
+      var video = document.getElementById("interactive-video");
+      var iframe1 = document.getElementById("interactive-html-1");
+      var iframeContainer2 = document.getElementById("second-iframe-container");
+
+      if (task.indexOf("towel") == -1) {
+        video.src = "media/videos/" + task + ".mp4";
+        iframe1.src = "media/interactive/" + task + ".html";
+        iframeContainer2.style.display = "none";
+      } else {
+        video.src = "media/videos/hang-towel.mp4";
+        iframe1.src = "media/interactive/hang-towel-1.html";
+        document.getElementById("interactive-html-2").src = "media/interactive/hang-towel-2.html";
+        iframeContainer2.style.display = "block";
+      }
+
+      video.play();
+    }
+  </script>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is my GitHub Pages site.</p>
+<body onload="updateInteractive();">
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">DISCO: Language-Guided Manipulation with Diffusion Policies and Constrained Inpainting</h1>
+      <h3 class="title is-4"> </h3>
+      <p class="is-size-5">By Ce Hao, Lin Kelvin, Siyuan Luo and Harold Soh</p>
+      <p class="is-size-5">National University of Singapore</p>
+
+      <!-- Links (PDF, Arxiv, GitHub) -->
+       <!-- 
+      <div class="buttons is-centered">
+        <a href="voxposer.pdf" class="button is-dark is-rounded">Paper</a>
+        <a href="https://arxiv.org/abs/2307.05973" class="button is-dark is-rounded">ArXiv</a>
+        <a href="https://youtu.be/Yvn4eR05A3M" class="button is-dark is-rounded">Video</a>
+        <a href="https://github.com/huangwl18/VoxPoser" class="button is-dark is-rounded">Code</a>
+       -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Section -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <video autoplay muted loop width="60%">
+        <source src="media/videos/teaser.mp4" type="video/mp4">
+        <!-- Placeholder for video -->
+      </video>
+      <h2 class="subtitle">Teaser</h2>
+    </div>
+  </div>
+</section>
+
+
 </body>
 </html>
