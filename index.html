@@ -49,44 +49,123 @@
       video.play();
     }
   </script>
+
+
+
+<style>
+  /* Style for centering the embed element */
+  .pdf-container {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;     /* Centers vertically */
+      height: 100vh;           /* Full viewport height */
+  }
+</style>
+
+
+
 </head>
 <body onload="updateInteractive();">
 
-<!-- Hero Section -->
+
+
 <section class="hero">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title is-1">DISCO: Language-Guided Manipulation with Diffusion Policies and Constrained Inpainting</h1>
-      <h3 class="title is-4"> </h3>
-      <p class="is-size-5">By Ce Hao, Lin Kelvin, Siyuan Luo and Harold Soh</p>
-      <p class="is-size-5">National University of Singapore</p>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-      <!-- Links (PDF, Arxiv, GitHub) -->
-       <!-- 
-      <div class="buttons is-centered">
-        <a href="voxposer.pdf" class="button is-dark is-rounded">Paper</a>
-        <a href="https://arxiv.org/abs/2307.05973" class="button is-dark is-rounded">ArXiv</a>
-        <a href="https://youtu.be/Yvn4eR05A3M" class="button is-dark is-rounded">Video</a>
-        <a href="https://github.com/huangwl18/VoxPoser" class="button is-dark is-rounded">Code</a>
-       -->
+          <h1 class="title is-1 publication-title"> <b>DISCO</b>: Language-Guided Manipulation  with Diffusion Policies and Constrained Inpainting</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">Ce Hao, Lin Kelvin, Siyuan Luo and Harold Soh</span>
+          </div>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">National University of Singapore</span>
+          </div>
+
+          
+
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Teaser Section -->
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <video autoplay muted loop width="60%">
-        <source src="media/videos/teaser.mp4" type="video/mp4">
-        <!-- Placeholder for video -->
-      </video>
-      <h2 class="subtitle">Teaser</h2>
+
+<section class="section" id="teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-mobile has-text-centered is-vcentered ">
+      <div class="column is-full is-vcentered">
+        <video class="video" loop playsinline muted autoplay controls src="src/icra2025_low.mp4"></video>
+      </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <img src="src/teaser.png" />
+      <p>
+        Diffusion policies have demonstrated robust performance in generative modeling, 
+        prompting their application in robotic manipulation controlled via language descriptions. 
+        In this paper, we introduce a zero-shot, open-vocabulary diffusion policy method for robot manipulation. 
+        Using Vision-Language Models (VLMs), our method transforms linguistic task descriptions into actionable keyframes in 3D space. 
+        These keyframes serve to guide the diffusion process via inpainting. 
+        However, naively enforcing the diffusion process to adhere to the generated keyframes is problematic: 
+        the keyframes from the VLMs may be incorrect and lead to action sequences where the diffusion model performs poorly. 
+        To address these challenges, we develop an inpainting optimization strategy that balances adherence to the keyframes v.s.
+         the training data distribution. Experimental evaluations demonstrate that our approach surpasses the performance of traditional 
+         fine-tuned language-conditioned methods in both simulated and real-world settings.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section"></section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <h2 class="title is-3">Online Appendix</h2>
+    <div class="content has-text-justified">
+      <iframe src="src/appendix.pdf" width="100%" height="800px" type="application/pdf">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hao2024language,
+      title={Language-Guided Manipulation with Diffusion Policies and Constrained Inpainting},
+      author={Hao, Ce and Lin, Kelvin and Luo, Siyuan and Soh, Harold},
+      journal={arXiv preprint arXiv:2406.09767},
+      year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer"></footer>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://illuminerf.github.io/">IllumiNeRF</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
