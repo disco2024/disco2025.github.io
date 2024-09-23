@@ -120,59 +120,71 @@
 </section>
 
 
-<section class="section" id="teaser">
-  <div class="container is-max-desktop">
-    <div class="columns is-mobile has-text-centered is-vcentered ">
-      <div class="column is-full is-vcentered">
-        <video class="video" loop playsinline muted autoplay controls src="src/icra2025-low.mp4"></video>
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="100%">
+            <source src="src/icra2025-low.mp4"
+                    type="video/mp4">
+          </video>
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">DISCO</span> is a language-guided manipulation system that <br> uses <b>diffusion policies</b> and <b>constrained inpainting</b> to generate action sequences from natural language descriptions.
+        </h2>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-light is-small">
+
+
+<section class="hero is-light is-small"></section>
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay muted loop height="100%">
-            <source src="src/single-object/bottle-left.mp4"
+        <div class="item item-bottle-left">
+          <video poster="" id="bottle-left" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/bottle-left.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay muted loop height="100%">
-            <source src="src/single-object/bottle-right.mp4"
+        <div class="item item-bottle-right">
+          <video poster="" id="bottle-right" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/bottle-right.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop height="100%">
-            <source src="src/single-object/fork-handle.mp4"
+        <div class="item item-fork-handle">
+          <video poster="" id="fork-handle" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/fork-handle.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay muted loop height="100%">
-            <source src="src/single-object/fork-head.mp4"
+        <div class="item item-fork-head">
+          <video poster="" id="fork-head" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/fork-head.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop height="100%">
-            <source src="src/single-object/hammer-handle.mp4"
+        <div class="item item-hammer-handle">
+          <video poster="" id="hammer-handle" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/hammer-handle.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop height="100%">
-            <source src="src/single-object/hammer-head.mp4"
+        <div class="item item-hammer-head">
+          <video poster="" id="hammer-head" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/hammer-head.mp4"
                     type="video/mp4">
           </video>
         </div>
-       <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay muted loop height="100%">
-            <source src="src/single-object/mug-handle.mp4"
+       <div class="item item-mug-handle">
+          <video poster="" id="mug-handle" autoplay muted loop height="100%">
+            <source src="src/single-subtitle/mug-handle.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -181,6 +193,10 @@
     </div>
   </div>
 </section>
+<h2 class="subtitle has-text-centered">
+</br>
+  We apply DISCO to manipulate objects with Frank Robot with <b>open-vocabulary</b> task descriptions.
+</h2>
 
 
 <section class="section">
